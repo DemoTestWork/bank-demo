@@ -1,0 +1,64 @@
+/* HEADER */
+/* navbar */
+ul.navbar-nav .active { background-color: #fff; }
+ul.navbar-nav .active a.nav-link { color: orange !important; }
+a.navbar-brand-custom {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+/* Background-style */
+.bottom-shad {
+    background-image: url(../images/top-shadow1.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: 6px;
+    width: 100%;
+}
+
+.top-shad {
+    background-image: url(../images/top-shadow2.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: 6px;
+    width: 100%;
+}
+
+
+/* COLOR */
+/* Text */
+.text-main { color: orange; }
+.text-second { color: dodgerblue; }
+/* bg */
+.bg-main { background-color: orange; color: #fff; }
+.bg-second { background-color: dodgerblue; }
+
+
+/* EXTRA */
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    z-index: 10;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 10rem;
+    background-color: #777;
+  }
+  .carousel-item > img {
+    min-width: 100%;
+    height: 10rem;
+  }
+
+/* Extra small devices (portrait phones, less than 576px) */
+/* @media (max-width: 575.98px) { */
+@media (max-width: 767.98px) {
+}

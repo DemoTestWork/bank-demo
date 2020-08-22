@@ -35,8 +35,8 @@
                         </table>
                     </div>
                     <div class="card-footer text-right bg-light">
-                            <button class="btn bg-light" style="font-size: 10px">{{ strtoupper(__('app.jibi.make_recharge')) }}</button>
-                            <button class="btn bg-light" style="font-size: 10px">{{ strtoupper(__('app.jibi.add_account')) }}</button>
+                        <button class="btn bg-light" style="font-size: 10px">{{ strtoupper(__('app.jibi.make_recharge')) }}</button>
+                        <button class="btn bg-light" style="font-size: 10px">{{ strtoupper(__('app.jibi.add_account')) }}</button>
                     </div>
                 </div>
             </div>

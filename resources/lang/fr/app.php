@@ -41,8 +41,11 @@ return [
     'add_date' => 'Date d\'ajout',
     'create_date' => 'Date de creation',
     'op_date' => 'Date d\'operation',
+    'add_date_hour' => 'Date et heure d\'ajout',
+
 
     'all' => 'Tous',
+    'all_f' => 'Toutes',
 
     // Buttons
     'back' => 'Retour',
@@ -67,7 +70,7 @@ return [
     'bank' => 'Banque',
     'account_type' => 'Type de compte',
     'operation_date' => 'Date d\'opération',
-    'status' => 'Status',
+    'status' => 'Statut',
 
     // Jibi Subscription
     'account_type' => 'Type de Compte',
@@ -137,7 +140,38 @@ return [
         'beneficiary_list_title' => 'Liste des Beneficiaires',
         'add_beneficiary' => 'Ajouter Beneficiaires',
         'beneficiary_type' => 'Type de beneficiaire',
-
-        
     ],
+
+    'card' => [
+        'card' => 'Cartes', 
+        'make_recharge_title' => 'Effectuer une recharge de carte',
+        'make_recharge_subtitle' => 'Effectuer vos recharges de carte',
+        'recharge_title' => 'Effectuer une recharge de carte',
+        'select_card' => 'Selectionner une carte',
+        'to_card' => 'Carte à recharger',
+        'add_card' => 'Ajouter une carte',
+
+        'monitoring_title' => 'Suivi des recharge de carte',
+        'monitoring_subtitle' => 'Consultez vos recharges de cartes initiées sur les 30 derniers jours',
+        'cards_list_title' => 'Liste des recharges de carte',
+        'number' => 'N° carte',
+        'beneficiary' => 'Beneficiare',
+        'card_beneficiary' => 'Bénéficiare de la  carte',
+        'make_recharge' => 'Effectuer une recharge',
+
+        'management_title' => 'Gestion des cartes rechargeables',
+        'management_subtitle' => 'Consultez la liste de vos cartes rechargeables',
+        'add_rechargeable' => 'Ajouter carte rechargeable',
+        'cards_list_title' => 'Liste des recharges de carte',
+        'rechargeable_cards_list' => 'Liste des cartes rechargeables',
+        'cardholder' => 'Détenteur de la carte',
+
+        'add_rechargeable_title' => 'Ajouter une carte rechargeable',
+        'add_rechargeable_subtitle' => 'Ajouter une carte rechargeable',
+        'rechargeable_holder_name' => 'Nom du porteur de la carte',
+        'rechargeable_holder_firstname' => 'Prénom du porteur de la carte',
+        'rechargeable_number_card' => 'N° de la carte',
+
+    ],
+
 ];

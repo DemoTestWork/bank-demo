@@ -62,6 +62,11 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('/operation/transfer/permanent', 'OperationController@transferPermanent')->defaults('_config', ['view' => 'operation.transfer.permanent'])->name('operation.transfer.permanent');
             Route::get('/operation/transfer/beneficiary-management', 'OperationController@beneficiaryManagement')->defaults('_config', ['view' => 'operation.transfer.beneficiary_management'])->name('operation.transfer.beneficiary_management');
 
+            Route::get('/operation/card/make-recharge', 'OperationController@makeRecharge')->defaults('_config', ['view' => 'operation.card.make_recharge'])->name('operation.card.make_recharge');
+            Route::get('/operation/card/monitoring', 'OperationController@cardMonitoring')->defaults('_config', ['view' => 'operation.card.monitoring'])->name('operation.card.monitoring');
+            Route::get('/operation/card/card-management', 'OperationController@cardManagement')->defaults('_config', ['view' => 'operation.card.card_management'])->name('operation.card.card_management');
+            Route::get('/operation/card/add-rechargeable', 'OperationController@addRechargeable')->defaults('_config', ['view' => 'operation.card.add_rechargeable'])->name('operation.card.add_rechargeable');
+
             
         });
     });

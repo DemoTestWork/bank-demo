@@ -92,4 +92,44 @@ class OperationController extends Controller
     {
         return view($this->_config['view']);
     }
+
+    /**
+    * Display Operation transfer => make recharge.
+    *
+    * @return \Illuminate\Http\Response
+    */
+    public function makeRecharge()
+    {
+        return view($this->_config['view']);
+    }
+
+    /**
+    * Display Operation transfer => card monitoring.
+    *
+    * @return \Illuminate\Http\Response
+    */
+    public function cardMonitoring()
+    {
+        return view($this->_config['view']);
+    }
+
+    /**
+    * Display Operation transfer => card management.
+    *
+    * @return \Illuminate\Http\Response
+    */
+    public function cardManagement()
+    {
+        return view($this->_config['view']);
+    }
+
+    /**
+    * Display Operation transfer => card management.
+    *
+    * @return \Illuminate\Http\Response
+    */
+    public function addRechargeable()
+    {
+        return view($this->_config['view']);
+    }
 }

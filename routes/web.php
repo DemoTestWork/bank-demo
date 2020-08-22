@@ -46,6 +46,18 @@ Route::group(['middleware' => ['web']], function () {
             ])->name('particular.session.destroy');
 
             Route::get('/home', 'ParticularController@home')->defaults('_config', ['view' => 'particular.home'])->name('particular.home.index');
+
+            /*
+            |--------------------------------------------------------------------------
+            | Operation Group
+            |--------------------------------------------------------------------------
+            |*/
+            Route::get('/operation/jibi/subscription', 'OperationController@jibiSubscription')->defaults('_config', ['view' => 'operation.jibi.subscription'])->name('operation.jibi.subscription');
+            Route::get('/operation/jibi/recharge', 'OperationController@jibiRecharge')->defaults('_config', ['view' => 'operation.jibi.recharge'])->name('operation.jibi.recharge');
+            Route::get('/operation/jibi/accounts', 'OperationController@jibiAccounts')->defaults('_config', ['view' => 'operation.jibi.accounts'])->name('operation.jibi.accounts');
+            Route::get('/operation/jibi/monitoring', 'OperationController@jibiMonitoring')->defaults('_config', ['view' => 'operation.jibi.monitoring'])->name('operation.jibi.monitoring');
+
+
         });
     });
 });

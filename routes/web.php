@@ -57,7 +57,12 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('/operation/jibi/accounts', 'OperationController@jibiAccounts')->defaults('_config', ['view' => 'operation.jibi.accounts'])->name('operation.jibi.accounts');
             Route::get('/operation/jibi/monitoring', 'OperationController@jibiMonitoring')->defaults('_config', ['view' => 'operation.jibi.monitoring'])->name('operation.jibi.monitoring');
 
+            Route::get('/operation/transfer/add-transfer', 'OperationController@addTransfer')->defaults('_config', ['view' => 'operation.transfer.add'])->name('operation.transfer.add');
+            Route::get('/operation/transfer/monitoring', 'OperationController@transferMonitoring')->defaults('_config', ['view' => 'operation.transfer.monitoring'])->name('operation.transfer.monitoring');
+            Route::get('/operation/transfer/permanent', 'OperationController@transferPermanent')->defaults('_config', ['view' => 'operation.transfer.permanent'])->name('operation.transfer.permanent');
+            Route::get('/operation/transfer/beneficiary-management', 'OperationController@beneficiaryManagement')->defaults('_config', ['view' => 'operation.transfer.beneficiary_management'])->name('operation.transfer.beneficiary_management');
 
+            
         });
     });
 });

@@ -9,33 +9,33 @@
     <div class="container-fluid px-5">
         <div class="row px-5 mx-5">
             <div class="col px-5">
-                <h1 class="h5 text-main pt-4">{{ strtoupper(__('app.jibi.recharge_title')) }}</h1>
-                <p class="text-muted small">{{ __('app.jibi.recharge_subtitle') }}</p>
+                <h1 class="h5 text-main pt-4">{{ strtoupper(__('app.transfer.title')) }}</h1>
+                <p class="text-muted small">{{ __('app.transfer.sub_title') }}</p>
 
                 <div class="card bg-light mt-5 mb-3">
-                    <div class="card-header text-muted small py-1">{{ strtoupper(__('app.jibi.recharge_title')) }}</div>
+                    <div class="card-header text-muted small py-1">{{ strtoupper(__('app.transfer.title')) }}</div>
                     <div class="card-body">
-                        <form class="form-horizontal" action="" autocomplete="on">
+                        <form class="form-horizontal" action="" autocomplete="off">
                             @csrf
                             <div class="form-group form-row my-5">
-                                <label class="control-label col-md-3 text-right" for="type">{{__('app.jibi.recharge_from')}}:</label>
+                                <label class="control-label col-md-3 text-right" for="type">{{__('app.transfer.from_account')}}:</label>
                                 <div class="col">
                                     <select id="inputState" class="form-control form-control-sm">
                                         <option selected>{{ strtoupper(__('app.jibi.select_account')) }}</option>
-                                        <option>...</option>
+                                        <option>{{ strtoupper(__('000111A000111222 | M Firstname Name | Account Type')) }}</option>
                                     </select>
-                                    <span class="float-right">{!! __('app.jibi.yesterday_sold', ['sold' => '0,00 DH']) !!}</span>
+                                    <span class="float-right small">{!! __('app.transfer.real_sold', ['sold' => '3.440,78', 'devise' => 'MAD']) !!}</span>
                                 </div>
                             </div>
+
                             <div class="form-group form-row">
-                                <label class="control-label col-md-3 text-right" for="type">{{__('app.jibi.title')}}:</label>
-                                <div class="col-md-1">
-                                    <input type="text" class="form-control form-control-sm" id="prefix" placeholder="+212" readonly>
+                                <label class="control-label col-md-3 text-right" for="type">{{__('app.transfer.to_account')}}:</label>
+                                <div class="col">
+                                    <select id="inputState" class="form-control form-control-sm">
+                                        <option selected>{{ strtoupper(__('app.transfer.select_beneficiary')) }}</option>
+                                    </select>
+                                    <a href="#"><span class="float-right small"><i class="fas fa-plus text-main"></i> {{ __('app.transfer.add_beneficiary') }}</span></a>
                                 </div>
-                                <div class="col-md-4">
-                                    <input type="text" class="form-control form-control-sm" id="phone" name="phone" placeholder="06 00 00 00 00">
-                                </div>
-                                <div class="col-md-2">Ex : 06 00 00 00 00</div>
                             </div>
                             <div class="form-group form-row">
                                 <label class="control-label col-md-3 text-right" for="amount">{{__('app.amount')}}:</label>
@@ -52,8 +52,17 @@
                             </div>
                             <div class="form-group form-row">
                                 <label class="control-label col-md-3 text-right" for="type">{{__('app.jibi.pattern')}}:</label>
-                                <div class="col-md-7">
+                                <div class="col-md-5">
                                     <input type="text" class="form-control form-control-sm" id="pattern" name="pattern" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="form-group form-row">
+                                <div class="col-md-3"></div>
+
+                                <div class="col-md-5">
+                                    <input class="form-check-input" type="checkbox" value="" id="standing_order" name="standing_order">
+                                    <label class="form-check-label" for="standing_order" style="font-size: 10px">{{__('app.transfer.standing_order')}}</label>
                                 </div>
                             </div>
                         </form>

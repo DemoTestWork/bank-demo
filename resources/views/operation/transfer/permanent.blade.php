@@ -2,7 +2,7 @@
 
 
 @section('title')
-    {{ config('app.name') }}
+    {{ __('app.jibi.monitoring_title') }}
 @endsection
 
 @section('content')
@@ -18,25 +18,25 @@
                         <table class="table table-bordered">
                             <thead class="thead-light" style="font-size: 10px">
                                 <tr>
-                                <th class="py-1" scope="col">{{ strtoupper(__('app.ref')) }}</th>
-                                <th class="py-1" scope="col">{{ strtoupper(__('app.jibi.number_account')) }}</th>
                                 <th class="py-1" scope="col">{{ strtoupper(__('app.sender_account')) }}</th>
-                                <th class="py-1" scope="col">{{ strtoupper(__('app.amount')) }}</th>
+                                <th class="py-1" scope="col">{{ strtoupper(__('app.beneficiary')) }}</th>
+                                <th class="py-1" scope="col">{{ strtoupper(__('app.transfer.amount_dh')) }}</th>
+                                <th class="py-1" scope="col">{{ strtoupper(__('app.transfer.first_execution_date')) }}</th>
+                                <th class="py-1" scope="col">{{ strtoupper(__('app.transfer.completion_date')) }}</th>
+                                <th class="py-1" scope="col">{{ strtoupper(__('app.transfer.frequency')) }}</th>
                                 <th class="py-1" scope="col">{{ strtoupper(__('app.jibi.pattern')) }}</th>
-                                <th class="py-1" scope="col">{{ strtoupper(__('app.jibi.operation_date')) }}</th>
-                                <th class="py-1" scope="col">{{ strtoupper(__('app.status')) }}</th>
+                                <th class="py-1" scope="col"></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td colspan="7" class="text-center small bg-white text-muted">{{ __('app.table.empty_data') }}</td>
+                                    <td colspan="8" class="text-center small bg-white text-muted">{{ __('app.table.empty_data') }}</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     <div class="card-footer text-right bg-light">
-                            <button class="btn bg-light" style="font-size: 10px">{{ strtoupper(__('app.jibi.make_recharge')) }}</button>
-                            <button class="btn bg-light" style="font-size: 10px">{{ strtoupper(__('app.jibi.add_account')) }}</button>
+                            <button class="btn bg-main" style="font-size: 10px"><i class="fas fa-plus text-light"></i> {{ strtoupper(__('app.transfer.add_permanent_transfer')) }}</button>
                     </div>
                 </div>
             </div>

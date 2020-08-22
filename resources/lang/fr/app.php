@@ -34,13 +34,25 @@ return [
         'empty_data' => 'Aucune données disponible dans le tableau',
     ],
 
+    'account' => 'Compte',
+    'rib' => 'RIB',
     'amount' => 'Montant',
+    'real_sold' => 'Solde Réel',
+    'add_date' => 'Date d\'ajout',
+    'create_date' => 'Date de creation',
+    'op_date' => 'Date d\'operation',
+
+    'all' => 'Tous',
 
     // Buttons
     'back' => 'Retour',
     'subscribe' => 'Souscrire',
     'cancel' => 'Annuler',
     'valid' => 'Valider',
+    'remove' => 'Supprimer',
+    'search' => 'Recherche',
+    'advance_search' => 'Recherche avancée',
+
 
     'guaranteed_security' => 'Sécurité garantie',
     'innovative_services' => 'Services innovants',
@@ -51,6 +63,9 @@ return [
     'authentication' => 'Authentification',
     'ref' => 'Reference',
     'sender_account' => 'Compte Emetteur',
+    'beneficiary' => 'Beneficiaire',
+    'bank' => 'Banque',
+    'account_type' => 'Type de compte',
     'operation_date' => 'Date d\'opération',
     'status' => 'Status',
 
@@ -89,5 +104,40 @@ return [
         'number_account' => 'N° de compte Jibi',
         'operation_date' => 'Date d\'operation',
 
+    ],
+
+    // Transfer
+    'transfer' => [
+        'title' => 'Effectuer un virement',
+        'sub_title' => 'Effectuer vos virement',
+        'from_account' => 'Virement du compte',
+        'to_account' => 'Vers le compte',
+        'real_sold' => 'Solde Réel:  <span class="text-success">:sold :devise</span>',
+        'select_beneficiary' => 'Selectionner un beneficiaire',
+        'add_beneficiary' => 'Ajouter un beneficiaire',
+        'standing_order' => 'Saisir un ordre permament',
+
+        'monitoring_title' => 'Suivi des Virements',
+        'monitoring_subtitle' => 'Consulter vos virement initiés sur les 90 jours',
+        'list_title' => 'Liste des virements',
+
+        'ref' => 'Ref.',
+        'type' => 'Type',
+        'rib_beneficiary' => 'RIB du beneficiaire',
+        'name_beneficiary' => 'Nom du beneficiaire',
+        'amount_dh' => 'Montant DH',
+        'first_execution_date' => 'Premiere date d\'execution',
+        'completion_date' => 'Date de fin d\'execution',
+        'frequency' => 'Frequence',
+        'add_permanent_transfer' => 'Ajouter un virement permanent',
+
+        'management_title' => 'Gestion des beneficiaires de virements',
+        'management_subtitle' => 'Consultez la liste de vos bénéficiaires de virements',
+        'beneficiary' => 'Bénéficiaire',
+        'beneficiary_list_title' => 'Liste des Beneficiaires',
+        'add_beneficiary' => 'Ajouter Beneficiaires',
+        'beneficiary_type' => 'Type de beneficiaire',
+
+        
     ],
 ];

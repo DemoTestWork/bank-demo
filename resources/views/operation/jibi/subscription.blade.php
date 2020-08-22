@@ -74,8 +74,8 @@
                             </form>
                         </div>
                         <div class="card-footer bg-light">
-                            <button type="submit" class="btn bg-light float-left">{{__('app.back')}}</button>
-                            <button type="submit" class="btn bg-main float-right">{{__('app.subscribe')}}</button>
+                            <button type="submit" class="btn bg-light float-left" style="font-size: 10px">{{ strtoupper(__('app.back')) }}</button>
+                            <button type="submit" class="btn bg-main float-right" style="font-size: 10px">{{ strtoupper(__('app.subscribe')) }}</button>
                         </div>
                     </div>
                 <!-- </div> -->

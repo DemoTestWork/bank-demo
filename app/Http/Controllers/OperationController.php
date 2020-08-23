@@ -132,4 +132,24 @@ class OperationController extends Controller
     {
         return view($this->_config['view']);
     }
+
+    /**
+    * Display Operation transfer => cash-press add provision.
+    *
+    * @return \Illuminate\Http\Response
+    */
+    public function addProvision()
+    {
+        return view($this->_config['view']);
+    }
+
+    /**
+    * Display Operation transfer => cash-press add monitoring.
+    *
+    * @return \Illuminate\Http\Response
+    */
+    public function cashExpressMonitoring()
+    {
+        return view($this->_config['view']);
+    }
 }

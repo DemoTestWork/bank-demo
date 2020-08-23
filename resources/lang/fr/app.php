@@ -88,7 +88,7 @@ return [
         // Jibi Recharge
         'title' => 'Jibi',
         'recharge_title' => 'Effectuer une recharge Jibi',
-        'recharge_subtitle' => 'Effectuez vos recharge de compte Jibi',
+        'recharge_subtitle' => 'Effectuez vos recharge de compte Jibi.',
         'recharge_from' => 'Recharger à partir du compte',
         'select_account' => 'Selectionner un compte',
         'yesterday_sold' => 'Solde de la veille : <span class="text-main">:sold</span>',
@@ -103,7 +103,7 @@ return [
 
         // Jibi Monitoring
         'monitoring_title' => 'Suivi des recharges Jibi',
-        'monitoring_subtitle' => 'Consultez vos recharges de carte initiées sur les 30 derniers jours',
+        'monitoring_subtitle' => 'Consultez vos recharges de carte initiées sur les 30 derniers jours.',
         'number_account' => 'N° de compte Jibi',
         'operation_date' => 'Date d\'operation',
 
@@ -121,7 +121,7 @@ return [
         'standing_order' => 'Saisir un ordre permament',
 
         'monitoring_title' => 'Suivi des Virements',
-        'monitoring_subtitle' => 'Consulter vos virement initiés sur les 90 jours',
+        'monitoring_subtitle' => 'Consulter vos virement initiés sur les 90 jours.',
         'list_title' => 'Liste des virements',
 
         'ref' => 'Ref.',
@@ -135,7 +135,7 @@ return [
         'add_permanent_transfer' => 'Ajouter un virement permanent',
 
         'management_title' => 'Gestion des beneficiaires de virements',
-        'management_subtitle' => 'Consultez la liste de vos bénéficiaires de virements',
+        'management_subtitle' => 'Consultez la liste de vos bénéficiaires de virements.',
         'beneficiary' => 'Bénéficiaire',
         'beneficiary_list_title' => 'Liste des Beneficiaires',
         'add_beneficiary' => 'Ajouter Beneficiaires',
@@ -145,14 +145,14 @@ return [
     'card' => [
         'card' => 'Cartes', 
         'make_recharge_title' => 'Effectuer une recharge de carte',
-        'make_recharge_subtitle' => 'Effectuer vos recharges de carte',
+        'make_recharge_subtitle' => 'Effectuer vos recharges de carte.',
         'recharge_title' => 'Effectuer une recharge de carte',
         'select_card' => 'Selectionner une carte',
         'to_card' => 'Carte à recharger',
         'add_card' => 'Ajouter une carte',
 
         'monitoring_title' => 'Suivi des recharge de carte',
-        'monitoring_subtitle' => 'Consultez vos recharges de cartes initiées sur les 30 derniers jours',
+        'monitoring_subtitle' => 'Consultez vos recharges de cartes initiées sur les 30 derniers jours.',
         'cards_list_title' => 'Liste des recharges de carte',
         'number' => 'N° carte',
         'beneficiary' => 'Beneficiare',
@@ -160,18 +160,32 @@ return [
         'make_recharge' => 'Effectuer une recharge',
 
         'management_title' => 'Gestion des cartes rechargeables',
-        'management_subtitle' => 'Consultez la liste de vos cartes rechargeables',
+        'management_subtitle' => 'Consultez la liste de vos cartes rechargeables.',
         'add_rechargeable' => 'Ajouter carte rechargeable',
         'cards_list_title' => 'Liste des recharges de carte',
         'rechargeable_cards_list' => 'Liste des cartes rechargeables',
         'cardholder' => 'Détenteur de la carte',
 
         'add_rechargeable_title' => 'Ajouter une carte rechargeable',
-        'add_rechargeable_subtitle' => 'Ajouter une carte rechargeable',
+        'add_rechargeable_subtitle' => 'Ajouter une carte rechargeable.',
         'rechargeable_holder_name' => 'Nom du porteur de la carte',
         'rechargeable_holder_firstname' => 'Prénom du porteur de la carte',
         'rechargeable_number_card' => 'N° de la carte',
 
+    ],
+
+    'cash_press' => [
+        'provision_title' => 'Effectuer une mise a disposition',
+        'provision_subtitle' => 'Votre argent est mis à disposition sur tous les GAB pour un retrait sans carte par vos bénéficiaires.',
+        'card' => 'Carte',
+        'any_card' => 'Aucune carte selectionnées',
+        'max_amount' => 'Montant max autorisé : <span class="text-main">:amount</span> :devise',
+        'confidential_digit' => 'Code confidentiel (à 4 chiffres)',
+
+        'monitoring_title' => 'Suivi des mise a disposition',
+        'monitoring_subtitle' => 'Consultez vos mise à disposition sur les 30 derniers jours.',
+        'select_card' => 'Choisissez une carte',
+        'provision_list' => 'Liste des mises a disposition',
     ],
 
 ];

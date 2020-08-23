@@ -67,7 +67,16 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('/operation/card/card-management', 'OperationController@cardManagement')->defaults('_config', ['view' => 'operation.card.card_management'])->name('operation.card.card_management');
             Route::get('/operation/card/add-rechargeable', 'OperationController@addRechargeable')->defaults('_config', ['view' => 'operation.card.add_rechargeable'])->name('operation.card.add_rechargeable');
 
-            
+            Route::get('/operation/cash-express/add-provision', 'OperationController@addProvision')->defaults('_config', ['view' => 'operation.cash_express.add_provision'])->name('operation.cash_express.add_provision');
+            Route::get('/operation/cash-express/monitoring', 'OperationController@cashExpressMonitoring')->defaults('_config', ['view' => 'operation.cash_express.monitoring'])->name('operation.cash_express.monitoring');
+           
+            /*
+            |--------------------------------------------------------------------------
+            | Setting Group
+            |--------------------------------------------------------------------------
+            |*/
+            Route::get('/setting/profile', 'SettingController@profile')->defaults('_config', ['view' => 'setting.profile'])->name('setting.profile');
+
         });
     });
 });

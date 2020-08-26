@@ -52,6 +52,7 @@ return [
     'subscribe' => 'Souscrire',
     'cancel' => 'Annuler',
     'valid' => 'Valider',
+    'save' => 'Enregistrer',
     'remove' => 'Supprimer',
     'search' => 'Recherche',
     'advance_search' => 'Recherche avancée',
@@ -186,6 +187,57 @@ return [
         'monitoring_subtitle' => 'Consultez vos mise à disposition sur les 30 derniers jours.',
         'select_card' => 'Choisissez une carte',
         'provision_list' => 'Liste des mises a disposition',
+    ],
+
+    // Setting
+    'setting' => [
+        'profile_title' => 'Parametres',
+        'menu' => [
+            'profile' => 'Mes informations personnelles',
+            'profile_subtitle' => 'Modifier votre opérateur',
+
+            'accounts' => 'Comptes',
+            'accounts_subtitle' => 'Ajouter ou déclarer un compte en transaction',
+
+            'electronic_report_title' => 'Releve Electronique',
+            'electronic_report_subtitle' => 'Gérer votre canal de réception de vos relevés bancaires',
+
+            'notifications_title' => 'Notifications',
+            'notifications_subtitle' => 'Liste des notifications',
+
+            'password_title' => 'Mot de passe',
+            'password_subtitle' => 'Modifier votre mot de passe',
+
+        ],
+        'civility' => 'Civilité',
+        'name' => 'Nom',
+        'firstname' => 'Prénom',
+        'email' => 'E-mail',
+        'phone' => 'N° GSM',
+        'operator' => 'Opérateur',
+        'language' => 'Langue',
+
+        'add_account' => 'Ajouter un compte',
+        'account_number' => 'N° de Compte',
+        'entitled' => 'Intitule',
+        'type' => 'Type',
+        'canal' => 'Canal',
+
+        'bank_statement' => 'Relevé bancaire reçu par courrier',
+        'electronic_readout' => 'Relevé electronique',
+
+        'notifications_list' => 'Liste des notifications',
+        'events' => 'Evenement',
+        'category' => 'Evenement',
+        'moyen' => 'Moyen',
+        'hour' => 'Heure',
+        'disabled_all' => 'Désactivé tout',
+
+        'password_title' => 'Modifier votre mot de passe',
+        'password' => 'Mot de passe',
+        'new_password' => 'Nouveau mot de passe',
+        'display_password' => 'Afficher mot de passe',
+        'change_password' => 'Changer le mot de passe',
     ],
 
 ];

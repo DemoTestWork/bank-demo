@@ -14,7 +14,7 @@ class SettingController extends Controller
     }
 
     /**
-    * Display Operation Jibi => subscription.
+    * Display Setting => profile.
     *
     * @return \Illuminate\Http\Response
     */
@@ -23,5 +23,43 @@ class SettingController extends Controller
         return view($this->_config['view']);
     }
 
+    /**
+    * Display Setting => accounts.
+    *
+    * @return \Illuminate\Http\Response
+    */
+    public function accounts()
+    {
+        return view($this->_config['view']);
+    }
 
+    /**
+    * Display Setting => accounts.
+    *
+    * @return \Illuminate\Http\Response
+    */
+    public function electronicReport()
+    {
+        return view($this->_config['view']);
+    }
+
+    /**
+    * Display Setting => notifications.
+    *
+    * @return \Illuminate\Http\Response
+    */
+    public function notifications()
+    {
+        return view($this->_config['view']);
+    }
+
+     /**
+    * Display Setting => password.
+    *
+    * @return \Illuminate\Http\Response
+    */
+    public function password()
+    {
+        return view($this->_config['view']);
+    }
 }

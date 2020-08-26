@@ -76,6 +76,11 @@ Route::group(['middleware' => ['web']], function () {
             |--------------------------------------------------------------------------
             |*/
             Route::get('/setting/profile', 'SettingController@profile')->defaults('_config', ['view' => 'setting.profile'])->name('setting.profile');
+            Route::get('/setting/accounts', 'SettingController@accounts')->defaults('_config', ['view' => 'setting.accounts'])->name('setting.accounts');
+            Route::get('/setting/electronic-report', 'SettingController@electronicReport')->defaults('_config', ['view' => 'setting.electronic_report'])->name('setting.electronic_report');
+            Route::get('/setting/notifications', 'SettingController@notifications')->defaults('_config', ['view' => 'setting.notifications'])->name('setting.notifications');
+            Route::get('/setting/password', 'SettingController@password')->defaults('_config', ['view' => 'setting.password'])->name('setting.password');
+
 
         });
     });

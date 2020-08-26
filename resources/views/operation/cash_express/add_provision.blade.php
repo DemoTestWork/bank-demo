@@ -15,7 +15,7 @@
                 <div class="card bg-light mt-5 mb-3">
                     <div class="card-header text-muted small py-1">{{ strtoupper(__('app.cash_press.provision_title')) }}</div>
                     <div class="card-body">
-                        <form class="form-horizontal" action="" autocomplete="on">
+                        <form class="form-horizontal" action="" autocomplete="off">
                             @csrf
                             <div class="form-group form-row my-5">
                                 <label class="control-label col-md-3 text-right" for="type">{{__('app.jibi.recharge_from')}}:</label>

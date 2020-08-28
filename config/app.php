@@ -182,6 +182,8 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         \Torann\GeoIP\GeoIPServiceProvider::class,
 
+        App\Providers\Html\HtmlServiceProvider::class,
+
 
         /*
          * Application Service Providers...

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ParticularController extends Controller
+class CompanyController extends Controller
 {
     protected $_config;
 
@@ -14,19 +14,19 @@ class ParticularController extends Controller
     }
 
     /**
-    * Display Particular Home.
+    * Display Company Home.
     *
     * @return \Illuminate\Http\Response
     */
     public function loginForm()
     {
-        // if (auth()->guard('particular')->check()) {
-        //     return redirect()->route('particular.home.index');
+        // if (auth()->guard('company')->check()) {
+        //     return redirect()->route('company.home.index');
         // } else {
-        //     if (strpos(url()->previous(), 'particular') !== false) {
+        //     if (strpos(url()->previous(), 'company') !== false) {
         //         $intendedUrl = url()->previous();
         //     } else {
-        //         $intendedUrl = route('particular.home.index');
+        //         $intendedUrl = route('company.home.index');
         //     }
 
         //     session()->put('url.intended', $intendedUrl);
@@ -38,7 +38,7 @@ class ParticularController extends Controller
     }
 
     /**
-    * Store Particular session.
+    * Store Company session.
     *
     * @return \Illuminate\Http\Response
     */
@@ -51,18 +51,18 @@ class ParticularController extends Controller
 
         $remember = request('remember');
 
-        if (! auth()->guard('particular')->attempt(request(['email', 'password']), $remember)) {
+        if (! auth()->guard('company')->attempt(request(['email', 'password']), $remember)) {
             session()->flash('alert', trans('app.session.login-error'));
             session()->flash('alert-class', 'alert-danger');
 
             return redirect()->back();
         }
 
-        // if (auth()->guard('particular')->user()->status == 0) {
+        // if (auth()->guard('company')->user()->status == 0) {
         //     session()->flash('alert', trans('worker::app.session.activate-warning'));
         //     session()->flash('alert-class', 'alert-warning');
 
-        //     auth()->guard('particular')->logout();
+        //     auth()->guard('company')->logout();
 
         //     return redirect()->route('worker.session.create');
         // }
@@ -71,7 +71,7 @@ class ParticularController extends Controller
     }
 
     /**
-    * Display Particular Home.
+    * Display Company Home.
     *
     * @return \Illuminate\Http\Response
     */

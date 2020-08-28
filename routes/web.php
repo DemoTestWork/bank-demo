@@ -25,8 +25,11 @@ Route::group(['middleware' => ['web']], function () {
     |--------------------------------------------------------------------------
     |*/
     Route::get('/particular', 'ParticularController@loginForm')->defaults('_config', ['view' => 'particular.login'])->name('particular.session.login.get');
-
     Route::post('/particular', 'ParticularController@loginPost')->defaults('_config', ['redirect' => 'particular.home.index'])->name('particular.session.login.post');
+
+    Route::get('/company', 'CompanyController@loginForm')->defaults('_config', ['view' => 'company.login'])->name('company.session.login.get');
+    Route::post('/company', 'CompanyController@loginPost')->defaults('_config', ['redirect' => 'company.home.index'])->name('company.session.login.post');
+
     /*
     |--------------------------------------------------------------------------
     | END Particular Auth Pages

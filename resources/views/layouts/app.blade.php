@@ -26,7 +26,6 @@
 	</head>
 	<body>
 
-        {{-- Html::navbar_fixed() --}}
 		<header>
 			<nav class="navbar navbar-expand-md navbar-light bg-light px-5" style="padding: 0 1rem;">
 				<a class="navbar-brand-custom" href="#">{{ config('app.name') }}</a>
@@ -35,29 +34,10 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav mr-auto ml-5 pt-5">
-					@if( Auth::user() )
-						<li class="nav-item">
-						<a class="nav-link" href="#">{{ __('app.menu.item') }}</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="#">{{ __('app.menu.item') }}</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="#">{{ __('app.menu.item') }}</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="#">{{ __('app.menu.item') }}</a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="#">{{ __('app.menu.item') }}</a>
-						</li>
+					@if( !Auth::user() )
+						{{ Html::particular_navbar() }}
 					@else
-						<li class="nav-item {{ (Config::get('app.url').'/'.Request::path()) == url('/particular') ? 'active' : ''}}" href="{{ url('/particular') }}">
-						<a class="nav-link">{{ __('app.menu.particular') }} <span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item">
-						<a class="nav-link" href="#">{{ __('app.menu.company') }}</a>
-						</li>
+						{{ Html::guest_navbar() }}
 					@endif
 					</ul>
 					
@@ -88,6 +68,15 @@
 
 		<script type="text/javascript">
 			$(function(){
+				$(".nav-item.dropdown, .dropdown").hover(
+					function () {
+						$('>.dropdown-menu', this).stop(true, true).fadeIn("fast");
+						$(this).addClass('open');
+					},
+					function () {
+						$('>.dropdown-menu', this).stop(true, true).fadeOut("fast");
+						$(this).removeClass('open');
+				});
 			});
 		</script>
 	</body>

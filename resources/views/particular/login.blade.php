@@ -67,7 +67,7 @@
                 <fieldset class="text-center h6 mb-4">{{ strtoupper(__('app.authentication')) }}</fieldset>
                 @csrf
                 <div class="form-group mb-4 pb-3">
-                    <input type="login" class="form-control" id="login" name="login" placeholder="{{  strtoupper(__('app.placeholder.login')) }}" autocomplete="off" required>
+                    <input type="text" class="form-control" id="login" name="login" placeholder="{{  strtoupper(__('app.placeholder.login')) }}" autocomplete="off" required>
                 </div>
                 <div class="form-group mb-4 pb-3">
                     <input type="password" class="form-control" id="password" name="password" placeholder="{{  strtoupper(__('app.placeholder.password')) }}" autocomplete="off" required>

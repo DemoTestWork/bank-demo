@@ -26,7 +26,7 @@
 	</head>
 	<body>
 
-		<header>
+		<header class="position-relative">
 			<nav class="navbar navbar-expand-md navbar-light bg-light px-5" style="padding: 0 1rem;">
 				<a class="navbar-brand-custom" href="#">{{ config('app.name') }}</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,15 +34,31 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav mr-auto ml-5 pt-5">
-					@if( !Auth::user() )
+					@if( Auth::guard('user')->check() )
 						{{ Html::particular_navbar() }}
 					@else
 						{{ Html::guest_navbar() }}
 					@endif
 					</ul>
-					
 				</div>
 			</nav>
+			@if( Auth::guard('user')->check() )
+			<div class="user-report position-absolute" style="top: -3px; right: 3em">
+				<a class="user-report px-2" href="#"><i class="far fa-envelope"></i> <span class="user-new-message">0</span></a>
+				<a class="user-report px-2" href="#"><i class="far fa-bell"></i></a>
+				<div class="dropdown show d-inline-block">
+					<a class="user-report px-2 text-uppercase dropdown-toggle" href="#" role="button" id="user-login-report" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="far fa-user"></i> <span class="user-name">{{ Auth::guard('user')->user()->name }}</span>
+					</a>
+					<!-- <div class="dropdown-menu" aria-labelledby="user-login-report">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+					</div> -->
+				</div>
+				<a class="user-report px-2" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fas fa-power-off"></i></a>
+				<form id="logout-form" action="{{ route('particular.session.destroy') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
+			</div>
+			@endif
 		</header>
 
 		<!-- Main Content -->

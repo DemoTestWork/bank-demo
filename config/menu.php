@@ -24,9 +24,39 @@ return [
 
     'particular' => [
         [
-            'name' => 'app.menu.operations',
-            'route_name' => 'particular.session.login.get',
+            'name' => 'app.menu.consultation',
+            'route_name' => null,
             'icon' => null,
+            'children' => [
+                [
+                    'name' => 'app.submenu.my_accounts',
+                    'route_name' => 'consultation.accounts',
+                    'icon' => null,
+                    'children' => [
+                    ],
+                ],
+                [
+                    'name' => 'app.submenu.my_cards',
+                    'route_name' => 'consultation.cards',
+                    'icon' => null,
+                    'children' => [
+                    ],
+                ],
+                [
+                    'name' => 'app.submenu.title_portfolio',
+                    'route_name' => 'consultation.titleaccount',
+                    'icon' => null,
+                    'children' => [
+                    ],
+                ],
+                [
+                    'name' => 'app.submenu.unpaid',
+                    'route_name' => 'consultation.unpaid',
+                    'icon' => null,
+                    'children' => [
+                    ],
+                ],
+            ],
         ],
         [
             'name' => 'app.menu.operations',

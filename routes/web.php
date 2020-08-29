@@ -45,10 +45,20 @@ Route::group(['middleware' => ['web']], function () {
     Route::group(['middleware' => [/* 'auth.particular' */ ]], function () {
         Route::prefix('particular')->group(function () {
             Route::post('/logout', 'ParticularController@destroy')->defaults('_config', [
-                'redirect' => 'particular.session.create'
+                'redirect' => 'particular.session.login.get'
             ])->name('particular.session.destroy');
 
             Route::get('/home', 'ParticularController@home')->defaults('_config', ['view' => 'particular.home'])->name('particular.home.index');
+
+            /*
+            |--------------------------------------------------------------------------
+            | consultation protected pages "auth.particular" middleware
+            |--------------------------------------------------------------------------
+            |*/
+            Route::get('/consultation/accounts', 'ConsultationController@accounts')->defaults('_config', ['view' => 'consultation.accounts'])->name('consultation.accounts');
+            Route::get('/consultation/cards', 'ConsultationController@cards')->defaults('_config', ['view' => 'consultation.cards'])->name('consultation.cards');
+            Route::get('/consultation/title_account', 'ConsultationController@titleAccount')->defaults('_config', ['view' => 'consultation.title_account'])->name('consultation.titleaccount');
+            Route::get('/consultation/unpaid', 'ConsultationController@unpaid')->defaults('_config', ['view' => 'consultation.unpaid'])->name('consultation.unpaid');
 
             /*
             |--------------------------------------------------------------------------

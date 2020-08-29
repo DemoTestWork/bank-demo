@@ -22,10 +22,16 @@ return [
         'particular' => 'Particulier - Profesionnel',
         'company' => 'Entreprise',
 
+        'consultation' => 'Consultation',
         'operations' => 'Opérations',
         'setting' => 'Paramètres',
     ],
     'submenu' => [
+        'my_accounts' => 'Mes comptes',
+        'my_cards' => 'Mes cartes',
+        'title_portfolio' => 'Mon portefeuille titre',
+        'unpaid' => 'Impayés',
+
         'jibi' => 'Jibi',
         'transfer' => 'Virement',
         'card_recharge' => 'Recharge de carte',

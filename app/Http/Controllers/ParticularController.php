@@ -11,6 +11,7 @@ class ParticularController extends Controller
     public function __construct()
     {
         $this->_config = request('_config');
+        $this->middleware('guest', ['except' => 'destroy']);
     }
 
     /**
@@ -20,21 +21,19 @@ class ParticularController extends Controller
     */
     public function loginForm()
     {
-        // if (auth()->guard('particular')->check()) {
-        //     return redirect()->route('particular.home.index');
-        // } else {
-        //     if (strpos(url()->previous(), 'particular') !== false) {
-        //         $intendedUrl = url()->previous();
-        //     } else {
-        //         $intendedUrl = route('particular.home.index');
-        //     }
+        if (auth()->guard('user')->check()) {
+            return redirect()->route('particular.home.index');
+        } else {
+            if (strpos(url()->previous(), 'user') !== false) {
+                $intendedUrl = url()->previous();
+            } else {
+                $intendedUrl = route('particular.home.index');
+            }
 
-        //     session()->put('url.intended', $intendedUrl);
+            session()->put('url.intended', $intendedUrl);
 
-        //     return view($this->_config['view']);
-        // }
-
-        return view($this->_config['view']);
+            return view($this->_config['view']);
+        }
     }
 
     /**
@@ -45,20 +44,20 @@ class ParticularController extends Controller
     public function loginPost()
     {
         $this->validate(request(), [
-            'email'   => 'required',
+            'login'   => 'required',
             'password' => 'required',
         ]);
 
         $remember = request('remember');
 
-        if (! auth()->guard('particular')->attempt(request(['email', 'password']), $remember)) {
-            session()->flash('alert', trans('app.session.login-error'));
+        if (! auth()->guard('user')->attempt(request(['login', 'password']), $remember)) {
+            session()->flash('alert', trans('app.session.login_error'));
             session()->flash('alert-class', 'alert-danger');
 
             return redirect()->back();
         }
 
-        // if (auth()->guard('particular')->user()->status == 0) {
+        // if (auth()->guard('user')->user()->status == 0) {
         //     session()->flash('alert', trans('worker::app.session.activate-warning'));
         //     session()->flash('alert-class', 'alert-warning');
 
@@ -78,5 +77,18 @@ class ParticularController extends Controller
     public function home()
     {
         return view($this->_config['view']);
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        auth()->guard('user')->logout();
+
+        return redirect()->route($this->_config['redirect']);
     }
 }

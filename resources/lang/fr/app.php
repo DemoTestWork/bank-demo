@@ -21,6 +21,40 @@ return [
     'menu' => [
         'particular' => 'Particulier - Profesionnel',
         'company' => 'Entreprise',
+
+        'operations' => 'Opérations',
+        'setting' => 'Paramètres',
+    ],
+    'submenu' => [
+        'jibi' => 'Jibi',
+        'transfer' => 'Virement',
+        'card_recharge' => 'Recharge de carte',
+        'cash_express_auto' => 'Cash Express Automatique',
+
+        'profile' => 'Mes informations personnelles',
+        'accounts' => 'Comptes',
+        'electronic_report' => 'Relevé électronique',
+        'notifications' => 'Gestion des notifications',
+        'password' => 'Mot de passe',
+    ],
+    'under_submenu' => [
+        'subscribe_to_an_account' => 'Souscrire à un Compte',
+        'recharge_jibi' => 'Recharge Jibi',
+        'accounts_jibi' => 'Mes Comptes Jibi',
+        'monitoring_jibi_recharge' => 'Suivi des recharges Jibi',
+
+        'make_transfer' => 'Effectuer un virement',
+        'monitoring_transfer' => 'Suivi des virements',
+        'permanent_transfer' => 'Mes virements permanents',
+        'beneficiary_management_transfer' => 'Gestion des bénéficiaires de virement',
+
+        'make_recharge' => 'Effectuer une recharge de carte',
+        'card_monitoring' => 'Suivi des recharges de carte',
+        'rechargeable_management' => 'Gestion des cartes rechargeable',
+        'add_rechargeable' => 'Ajouter une carte rechargeable',
+
+        'add_provision' => 'Effectuer une mise à disposition',
+        'provision_monitoring' => 'Suivi des mises à disposition',
     ],
     'web' => [
         'app' => [

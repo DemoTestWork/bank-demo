@@ -1,7 +1,7 @@
 /* HEADER */
 /* navbar */
-ul.navbar-nav .active { background-color: #fff; }
-ul.navbar-nav .active a.nav-link { color: orange !important; }
+ul.navbar-nav .active, ul.dropdown-menu .active, .dropdown-submenu.active { background-color: #fff; }
+ul.navbar-nav .active a.nav-link, ul.dropdown-menu .active a.dropdown-item { color: orange !important; }
 a.navbar-brand-custom {
     padding-top: .75rem;
     padding-bottom: .75rem;
@@ -34,6 +34,10 @@ a.navbar-brand-custom {
 /* bg */
 .bg-main { background-color: orange; color: #fff; }
 .bg-second { background-color: dodgerblue; }
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
 
 /* EXTRA */
 /* CUSTOMIZE THE CAROUSEL
@@ -95,6 +99,47 @@ a.navbar-brand-custom {
   .checkbox { 
     display : none;
  }
+
+ /* Hoverable menu */
+ .dropdown-submenu {
+  position: relative;
+}
+
+/* .dropdown-submenu> a:after {
+  content: ">";
+  float: right;
+} */
+
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown-item { padding: .25rem .5rem !important;}
+li.has-submenu > a {
+  background-image: url(../images/icones/angle-right-solid.svg);
+  background-repeat: no-repeat;
+  background-position: 97% 48%;
+  font-size: 13px;
+  /* padding: .5em 1em; */
+}
+
+li.dropdown a {
+  font-size: 13px;
+  /* padding: .5em 1em; */
+}
+
+.dropdown-menu {
+  padding: 0 !important;
+  border: 1px solid rgba(153, 153, 153, 0.1) !important;
+}
+.dropdown-menu a { padding: .5em !important; color: #777 }
 
 
 /* Extra small devices (portrait phones, less than 576px) */

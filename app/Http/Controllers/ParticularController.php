@@ -11,6 +11,7 @@ class ParticularController extends Controller
     public function __construct()
     {
         $this->_config = request('_config');
+        $this->middleware('auth.particular')->except(['loginForm','loginPost']);
         $this->middleware('guest', ['except' => 'destroy']);
     }
 

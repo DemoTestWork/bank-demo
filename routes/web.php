@@ -42,7 +42,7 @@ Route::group(['middleware' => ['web']], function () {
     | Particular protected pages "auth.particular" middleware
     |--------------------------------------------------------------------------
     |*/
-    Route::group(['middleware' => [/* 'auth.particular' */ ]], function () {
+    Route::group(['middleware' => ['auth.particular']], function () {
         Route::prefix('particular')->group(function () {
             Route::post('/logout', 'ParticularController@destroy')->defaults('_config', [
                 'redirect' => 'particular.session.login.get'

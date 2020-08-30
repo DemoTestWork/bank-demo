@@ -26,20 +26,22 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="small text-muted">
+                                <!-- <tr class="small text-muted">
                                     <td>000111A000111222</td>
                                     <td>M JOHN DOE</td>
                                     <td>COMPTE CHEQUE</td>
                                     <td>CONSULTATION ET TRANSACTION</td>
                                     <td></td>
-                                </tr>
+                                </tr> -->
+                                @foreach ( $user->accounts as $account )
                                 <tr class="small text-muted">
-                                    <td>000111A000111222</td>
-                                    <td>M JOHN DOE</td>
+                                    <td>{{ $account->number }}</td>
+                                    <td>{{ $user->firstname }} <span class="text-uppercase">{{ $user->name }}</span></td>
                                     <td>COMPTE CARNET</td>
                                     <td>CONSULTATION ET TRANSACTION</td>
                                     <td></td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

@@ -38,4 +38,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function accounts() 
+    {
+        return $this->hasMany('App\Account');
+    }
+
+    public function phoneHidden()
+    {
+        return str_pad(substr($this->phone, -4), strlen($this->phone), '*', STR_PAD_LEFT);
+    }
 }

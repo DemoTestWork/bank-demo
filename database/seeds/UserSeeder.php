@@ -5,7 +5,7 @@ use Illuminate\Database\Seeder;
 class UserSeeder extends Seeder
 {
     protected $users = [
-        ['civility' => 'M', 'name' => 'Doe', 'firstname' => 'John', 'email' => 'test1@maxmind.ma', 'phone' => '0600000001', 'login' => 'FIRSTUSER', 'password' => 'passwordtest'],
+        ['civility' => 'M', 'name' => 'Rimbaut', 'firstname' => 'Mathieu', 'email' => 'mathieu@test.fr', 'phone' => '0600000001', 'login' => 'FIRSTUSER', 'password' => 'passwordtest'],
 
     ];
     /**

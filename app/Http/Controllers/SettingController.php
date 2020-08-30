@@ -2,15 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\UserRepository;
+
 use Illuminate\Http\Request;
+use Auth;
+use DB;
 
 class SettingController extends Controller
 {
     protected $_config;
+    protected $userRepository;
 
-    public function __construct()
+
+    public function __construct(UserRepository $userRepository)
     {
         $this->_config = request('_config');
+        $this->middleware('auth.particular')->except([]);
+
+        $this->userRepository = $userRepository;
     }
 
     /**
@@ -20,7 +29,8 @@ class SettingController extends Controller
     */
     public function profile()
     {
-        return view($this->_config['view']);
+        $user = Auth::guard('user')->user();
+        return view($this->_config['view'], compact('user'));
     }
 
     /**
@@ -30,7 +40,9 @@ class SettingController extends Controller
     */
     public function accounts()
     {
-        return view($this->_config['view']);
+        $user = $this->userRepository->getById( Auth::guard('user')->user()->id );
+        // $accounts = DB::table('accounts')->where('user_id', $user->id)->get();
+        return view($this->_config['view'], compact('user'));
     }
 
     /**

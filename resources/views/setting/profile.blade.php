@@ -21,31 +21,31 @@
                             <div class="row">
                                 <label class="col-md-3 text-right" for="type">{{__('app.setting.civility')}}:</label>
                                 <div class="col-md-5 pl-0">
-                                    M
+                                    {{ $user->civility }}
                                 </div>
                             </div>
                             <div class="row">
                                 <label class="col-md-3 text-right" for="type">{{__('app.setting.name')}}:</label>
                                 <div class="col-md-5 pl-0">
-                                    Doe
+                                    {{ $user->name }}
                                 </div>
                             </div>
                             <div class="row">
                                 <label class="col-md-3 text-right" for="type">{{__('app.setting.firstname')}}:</label>
                                 <div class="col-md-5 pl-0">
-                                    John
+                                    {{ $user->firstname }}
                                 </div>
                             </div>
                             <div class="row">
                                 <label class="col-md-3 text-right" for="type">{{__('app.setting.email')}}:</label>
                                 <div class="col-md-5 pl-0">
-                                    
+                                    {{ $user->email }}
                                 </div>
                             </div>
                             <div class="row">
                                 <label class="col-md-3 text-right" for="type">{{__('app.setting.phone')}}:</label>
                                 <div class="col-md-5 pl-0">
-                                    (+33) *******0000
+                                    (+212) {{ $user->phoneHidden() }}
                                 </div>
                             </div>
                             <div class="row">

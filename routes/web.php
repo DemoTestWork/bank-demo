@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return redirect()->route('particular.session.login.get');
 });
 
 
@@ -59,6 +60,8 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('/consultation/cards', 'ConsultationController@cards')->defaults('_config', ['view' => 'consultation.cards'])->name('consultation.cards');
             Route::get('/consultation/title_account', 'ConsultationController@titleAccount')->defaults('_config', ['view' => 'consultation.title_account'])->name('consultation.titleaccount');
             Route::get('/consultation/unpaid', 'ConsultationController@unpaid')->defaults('_config', ['view' => 'consultation.unpaid'])->name('consultation.unpaid');
+            Route::get('/consultation/equipement', 'ConsultationController@equipement')->defaults('_config', ['view' => 'consultation.equipement'])->name('consultation.equipement');
+            Route::get('/consultation/access_doc', 'ConsultationController@access_doc')->defaults('_config', ['view' => 'consultation.access_doc'])->name('consultation.access_doc');
 
             /*
             |--------------------------------------------------------------------------

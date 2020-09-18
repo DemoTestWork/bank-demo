@@ -9,73 +9,102 @@
 <div class="container-fluid px-5">
     <div class="row px-5 mx-5">
         <div class="col px-5">
-            <h1 class="h5 text-main pt-4">{{ strtoupper(__('test.')) }}</h1>
+            <h1 class="h5 text-main pt-4 text-uppercase">{{ __('test.unpaid') }}</h1>
+            <p>{{ (__('test.unpaid_subtitle')) }}</p>
 
-            <div class="card bg-light mt-5 mb-3">
-                <!-- <div class="card-header text-muted small py-1">{{ strtoupper(__('app.cash_press.provision_title')) }}</div> -->
-                <div class="card-body">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="unpaid" data-toggle="tab" href="#unpaid-credit" role="tab" aria-controls="unpaid" aria-selected="true">{{ strtoupper(__('test.unpaid')) }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" id="unpaid-check-issued" data-toggle="tab" href="#unpaid-check-issued" role="tab" aria-controls="unpaid-check-issued" aria-selected="true">{{ strtoupper(__('test.unpaid_check_issued')) }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="unpaid-check-remitted-tab" data-toggle="tab" href="#unpaid-check-remitted" role="tab" aria-controls="unpaid-check-remitted" aria-selected="false">{{ strtoupper(__('test.unpaid check remitted')) }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="unpaid-debit-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="unpaid-debit" aria-selected="false">{{ strtoupper(__('test.unpaid_debit')) }}</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="unpaid" role="tabpanel" aria-labelledby="unpaid-tab">
+            <div class="card text-center">
+                <div class="card-header">
+                    <nav class=" rounded">
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-link active" id="nav-unpaid-credit-tab" data-toggle="tab" href="#nav-unpaid-credit" role="tab" aria-controls="nav-unpaid-credit" aria-selected="true">{{ __('test.unpaid_credit') }}</a>
+                            <a class="nav-link" id="nav-unpaid-check-issued-tab" data-toggle="tab" href="#nav-unpaid-check-issued" role="tab" aria-controls="nav-unpaid-check-issued" aria-selected="true">{{ __('test.unpaid_check_issued') }}</a>
+                            <a class="nav-link" id="nav-unpaid-check-remitted-tab" data-toggle="tab" href="#nav-unpaid-check-remitted" role="tab" aria-controls="nav-unpaid-check-remitted" aria-selected="true">{{ __('test.unpaid_check_remitted') }}</a>
+                            <a class="nav-link" id="nav-unpaid-debit-tab" data-toggle="tab" href="#nav-unpaid-debit" role="tab" aria-controls="nav-unpaid-debit" aria-selected="true">{{ __('test.unpaid_debit') }}</a>
+                        </div>
+                    </nav>
+                    <div id="nav-tabContent" class="card-body tab-content">
+                        <div class="tab-pane fade show active" id="nav-unpaid-credit" role="tabpanel" aria-labelledby="nav-unpaid-credit-tab">
                             <table class="table table-bordered">
-                                <thead class="thead-light" style="font-size: 10px">
+                                <thead class="thead-light">
                                     <tr>
-                                        <th class="" scope="col">
-                                        </th>
-                                        <th class="py-1" scope="col">{{ strtoupper(__('test.account_number')) }}</th>
-                                        <th class="py-1" scope="col">{{ strtoupper(__('test.contract_number')) }}</th>
-                                        <th class="py-1" scope="col">{{ strtoupper(__('test.')) }}</th>
-                                        <th class="py-1" scope="col">{{ strtoupper(__('app.account_type')) }}</th>
-                                        <th class="py-1" scope="col">{{ strtoupper(__('app.bank')) }}</th>
-                                        <th class="py-1" scope="col">{{ strtoupper(__('app.add_date')) }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.account_number') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.contract_number') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.type_of_credit') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.unlocked_capital') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.maturity_amount') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.date_of_unpaid') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.unpaid_amount') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 </tbody>
                             </table>
+                            <span>aucun données disponible</span>
                         </div>
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                        <div class="tab-pane fade show" id="nav-unpaid-check-issued" role="tabpanel" aria-labelledby="nav-unpaid-check-issued-tab">
+                            <div class="text-left py-2"> consulter la liste des impayés chèque / LCN emis des 30 derniers jours.</div>
                             <table class="table table-bordered">
-                                <thead class="thead-light" style="font-size: 10px">
+                                <thead class="thead-light">
                                     <tr>
-                                        <th class="" scope="col">
-                                        </th>
-                                        <th class="py-1" scope="col">{{ strtoupper(__('app.beneficiary')) }}</th>
-                                        <th class="py-1" scope="col">{{ strtoupper(__('app.transfer.beneficiary_type')) }}</th>
-                                        <th class="py-1" scope="col">{{ strtoupper(__('app.rib')) }}</th>
-                                        <th class="py-1" scope="col">{{ strtoupper(__('app.account_type')) }}</th>
-                                        <th class="py-1" scope="col">{{ strtoupper(__('app.bank')) }}</th>
-                                        <th class="py-1" scope="col">{{ strtoupper(__('app.add_date')) }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.account_number') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.type') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.date_of_unpaid') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.amount') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <p>aucune donnée disponible dans ce tableau</p>
                                 </tbody>
                             </table>
+                            <span>aucun données disponible</span>
                         </div>
-                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+
+                        <div class="tab-pane fade show" id="nav-unpaid-check-remitted" role="tabpanel" aria-labelledby="nav-unpaid-check-remitted-tab">
+                            <table class="table table-bordered">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.account_number') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.type') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.date_of_unpaid') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.date_of_discount') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.type_of_discount') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.discount_number') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.unpaid_amount') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.title_name') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.unpaid_reason') }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <span>aucun données disponible</span>
+                        </div>
+                        <div class="tab-pane fade show" id="nav-unpaid-debit" role="tabpanel" aria-labelledby="nav-unpaid-debit-tab">
+                            <table class="table table-bordered">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.account_number') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.contract_number') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.maturity_amount') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.unpaid_date') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.maturity_amount') }}</th>
+                                        <th class="py-1 text-uppercase" scope="col">{{ __('test.discount_number') }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <span>aucun données disponible</span>
+                        </div>
                     </div>
                 </div>
-                <div class="card-footer bg-light">
-                    <button type="submit" class="btn bg-light float-left" style="font-size: 10px">{{ strtoupper(__('app.cancel')) }}</button>
-                    <button type="submit" class="btn bg-main float-right" style="font-size: 10px">{{ strtoupper(__('app.valid')) }}</button>
+                <div class="card-footer">
+
                 </div>
             </div>
-
         </div>
+
     </div>
+</div>
 </div>
 @endsection

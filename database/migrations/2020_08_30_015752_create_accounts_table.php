@@ -37,7 +37,7 @@ class CreateAccountsTable extends Migration
             $table->bigInteger('currency_id')->unsigned();
             $table->foreign('currency_id')
                 ->references('id')
-                ->on('currency')
+                ->on('currencies')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
 

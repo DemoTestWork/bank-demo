@@ -15,10 +15,10 @@ class CurrencySeeder extends Seeder
      */
     public function run()
     {
-        DB::table('currency')->delete();
+        DB::table('currencies')->delete();
 
         foreach($this->currency as $currency) {
-            DB::table('currency')->insert([
+            DB::table('currencies')->insert([
                 'id' => $currency['id'],
                 'name' => $currency['name'],
                 'short_name' => $currency['short_name'],

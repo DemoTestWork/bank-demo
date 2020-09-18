@@ -4,15 +4,27 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Repositories\UserRepository;
+use App\Repositories\AccountRepository;
+
+use Auth;
+use DB;
+
 class ParticularController extends Controller
 {
     protected $_config;
+    protected $userRepository;
+    protected $accountRepository;
 
-    public function __construct()
+
+    public function __construct(UserRepository $userRepository, AccountRepository $accountRepository)
     {
         $this->_config = request('_config');
         $this->middleware('auth.particular')->except(['loginForm','loginPost']);
         $this->middleware('guest', ['except' => 'destroy']);
+
+        $this->userRepository = $userRepository;
+        $this->accountRepository = $accountRepository;
     }
 
     /**
@@ -77,7 +89,17 @@ class ParticularController extends Controller
     */
     public function home()
     {
-        return view($this->_config['view']);
+        $user = $this->userRepository->getById( Auth::guard('user')->user()->id );
+        // $accounts = $this->accountRepository->getUserAccount($user->id);
+
+        // echo '<pre>',print_r($user->accounts[0],1),'</pre>'; exit();
+
+
+        // if($accounts) $user->accounts = $accounts; 
+
+        // echo '<pre>',print_r($accounts[0],1),'</pre>'; exit();
+
+        return view($this->_config['view'], compact('user'));
     }
 
     /**

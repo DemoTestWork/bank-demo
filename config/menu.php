@@ -24,9 +24,16 @@ return [
 
     'particular' => [
         [
+            'name' => null,
+            'route_name' => 'particular.home.index',
+            'icon' => null,
+            'image' => 'icones/houses.svg',
+        ],
+        [
             'name' => 'app.menu.consultation',
             'route_name' => null,
             'icon' => null,
+            'image' => null,
             'children' => [
                 [
                     'name' => 'app.submenu.my_accounts',
@@ -56,12 +63,27 @@ return [
                     'children' => [
                     ],
                 ],
+                [
+                    'name' => 'app.submenu.product_provider',
+                    'route_name' => 'consultation.equipement',
+                    'icon' => null,
+                    'children' => [
+                    ],
+                ],
+                [
+                    'name' => 'app.submenu.doc_consultation',
+                    'route_name' => 'consultation.access_doc',
+                    'icon' => null,
+                    'children' => [
+                    ],
+                ],
             ],
         ],
         [
             'name' => 'app.menu.operations',
             'route_name' => null,
             'icon' => null,
+            'image' => null,
             'children' => [
                 [
                     'name' => 'app.submenu.jibi',
@@ -167,6 +189,7 @@ return [
             'name' => 'app.menu.setting',
             'route_name' => null,
             'icon' => null,
+            'image' => null,
             'children' => [
                 [
                     'name' => 'app.submenu.profile',

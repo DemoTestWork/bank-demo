@@ -31,6 +31,8 @@ return [
         'my_cards' => 'Mes cartes',
         'title_portfolio' => 'Mon portefeuille titre',
         'unpaid' => 'Impayés',
+        'product_provider' => 'Mes produits et services',
+        'doc_consultation' => 'Consultation de documents',
 
         'jibi' => 'Jibi',
         'transfer' => 'Virement',
@@ -123,6 +125,15 @@ return [
     'id_contact' => 'Id Contact',
     'type' => 'Type',
     'accept_condition' => 'J\'ai lu et j\'accepte les conditions générales d\'utilisation.',
+
+    'home' => [
+        'title' => 'Accueil',
+        'my_accounts' => 'Mes comptes',
+        'notifications' => 'Notifications',
+        'unpaid' => 'Impayés',
+        'transfers' => 'Virements',
+        'empty_data' => 'Aucune donnée trouvée',
+    ],
 
     // Jibi
     'jibi' => [

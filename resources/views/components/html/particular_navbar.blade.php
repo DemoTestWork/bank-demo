@@ -1,5 +1,11 @@
 @foreach (Config::get('menu.particular') as $menu)
-    @if( $menu['route_name'] )
+    @if( $menu['image'] )
+        <li class="nav-item {{ (Config::get('app.url').'/'.Request::path()) == route($menu['route_name']) ? 'active' : ''}}">
+            <a class="nav-link text-uppercase" href="{{ route($menu['route_name']) }}">
+                <img class="img-fluid" src="{{ asset('images/'.$menu['image']) }}" alt="" style="width: 22px" />
+            </a>
+        </li>
+    @elseif( $menu['route_name'] )
         <li class="nav-item {{ (Config::get('app.url').'/'.Request::path()) == route($menu['route_name']) ? 'active' : ''}}">
             <a class="nav-link text-uppercase" href="{{ route($menu['route_name']) }}">
                 {{ __($menu['name']) }}

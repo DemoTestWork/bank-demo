@@ -38,4 +38,14 @@ class ConsultationController extends Controller
     {
         return view($this->_config['view']);
     }
+
+    public function equipement()
+    {
+        return view($this->_config['view']);
+    }
+
+    public function access_doc()
+    {
+        return view($this->_config['view']);
+    }
 }

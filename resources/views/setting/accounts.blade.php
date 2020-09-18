@@ -18,11 +18,11 @@
                         <table class="table table-bordered">
                             <thead class="thead-light" style="font-size: 10px">
                                 <tr>
-                                <th class="py-1" scope="col">{{ strtoupper(__('app.setting.account_number')) }}</th>
-                                <th class="py-1" scope="col">{{ strtoupper(__('app.setting.entitled')) }}</th>
-                                <th class="py-1" scope="col">{{ strtoupper(__('app.setting.type')) }}</th>
-                                <th class="py-1" scope="col">{{ strtoupper(__('app.setting.canal')) }}</th>
-                                <th class="py-1" scope="col">{{ strtoupper(__('app.status')) }}</th>
+                                <th class="py-1 text-uppercase" scope="col">{{ __('app.setting.account_number') }}</th>
+                                <th class="py-1 text-uppercase" scope="col">{{ __('app.setting.entitled') }}</th>
+                                <th class="py-1 text-uppercase" scope="col">{{ __('app.setting.type') }}</th>
+                                <th class="py-1 text-uppercase" scope="col">{{ __('app.setting.canal') }}</th>
+                                <th class="py-1 text-uppercase" scope="col">{{ __('app.status') }}</th>
                                 </tr>
                             </thead>
                             <tbody>

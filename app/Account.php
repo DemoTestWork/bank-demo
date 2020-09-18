@@ -44,7 +44,7 @@ class Account extends Model
 		return $this->belongsTo('App\Currency');
     }
     
-    public function type() 
+    public function account_type() 
 	{
 		return $this->belongsTo('App\AccountType');
 	}

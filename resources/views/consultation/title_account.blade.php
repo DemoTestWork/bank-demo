@@ -13,27 +13,27 @@
             <p class="text-muted small">{{ __('test.View_your_portfolio_of_securities') }}</p>
 
             <div class="card bg-light mt-5 mb-3">
-                <div class="card-header text-muted py-1">{{ strtoupper(__('test.title_portfolio')) }}</div>
+                <div class="card-header text-muted py-1 text-uppercase">{{ __('test.title_portfolio') }}</div>
                 <div class="card-body">
-                    <div class="container-fluid justify-content-end">
-                        <div class="row justify-content-lg-around">
+                    <div class="container-fluid  justify-content-end">
+                        <div class="row justify-content-lg-around text-uppercase">
                             <div class="col">
-                                {{ strtoupper(__('test.title_account_number')) }}
+                                {{ __('test.title_account_number') }}
                             </div>
                             <div class="col-4">
-                                {{ strtoupper(__('test.associated_species_account_number')) }}
+                                {{ __('test.associated_species_account_number') }}
 
                             </div>
                             <div class="col">
-                                {{ strtoupper(__('test.entitled')) }}
+                                {{ __('test.entitled') }}
 
                             </div>
                             <div class="col">
-                                {{ strtoupper(__('test.valuation')) }}
+                                {{ __('test.valuation') }}
 
                             </div>
                             <div class="col">
-                                {{ strtoupper(__('test.percentage')) }}
+                                {{ __('test.percentage') }}
                             </div>
                         </div>
                         <div class="row">

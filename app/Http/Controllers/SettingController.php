@@ -33,7 +33,7 @@ class SettingController extends Controller
     */
     public function profile()
     {
-        $user = Auth::guard('user')->user();
+        $user = $this->userRepository->getById( Auth::guard('user')->user()->id );
         return view($this->_config['view'], compact('user'));
     }
 
@@ -45,9 +45,7 @@ class SettingController extends Controller
     public function accounts()
     {
         $user = $this->userRepository->getById( Auth::guard('user')->user()->id );
-        $accounts = $this->accountRepository->getUserAccount($user->id);
-        // echo '<pre>',print_r($accounts[1]->currency, 1),'</pre>'; exit();
-        return view($this->_config['view'], compact('user', 'accounts'));
+        return view($this->_config['view'], compact('user'));
     }
 
     /**
@@ -57,6 +55,7 @@ class SettingController extends Controller
     */
     public function electronicReport()
     {
+        $user = $this->userRepository->getById( Auth::guard('user')->user()->id );
         return view($this->_config['view']);
     }
 

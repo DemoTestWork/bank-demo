@@ -64,6 +64,9 @@ return [
         'add_provision' => 'Effectuer une mise à disposition',
         'provision_monitoring' => 'Suivi des mises à disposition',
     ],
+    'form' => [
+        'required_field' => 'Champ obligatoire',
+    ],
     'web' => [
         'app' => [
             'name' => 'Application Net',
@@ -133,6 +136,15 @@ return [
         'unpaid' => 'Impayés',
         'transfers' => 'Virements',
         'empty_data' => 'Aucune donnée trouvée',
+        'empty_unpaid' => 'Vous n\'avez pas de nouvelles factures',
+        'empty_transfer' => 'Vous n\'avez pas de nouveaux transferts',
+        'edit_rib' => 'Edition de RIB',
+        'make_transfer' => 'Effectuer un virement',
+        'real_time_operations' => 'Extrait des opérations temps réel',
+        'accounting_transactions' => 'Extrait des opérations comptables',
+    ],
+    'my_account' => [
+        'title' => 'Mes comptes',
     ],
 
     // Jibi
@@ -192,6 +204,11 @@ return [
         'beneficiary_list_title' => 'Liste des Beneficiaires',
         'add_beneficiary' => 'Ajouter Beneficiaires',
         'beneficiary_type' => 'Type de beneficiaire',
+
+        'add_beneficiary_title' => 'Ajout de bénéficiaire',
+        'add_beneficiary_subtitle' => 'Ajouter un bénéficiaire de virement',
+        'add_beneficiary_formtitle' => 'Ajouter un bénéficiaire',
+        'add_beneficiary_info' => 'Les données à caractère personnel recueillies dans le cadre du présent formulaire sont destinées à Attijariwafa bank qui de convention expresse est autorisée à procéder à leur traitement automatisé ou non, à les communiquer aux personnes morales et aux filiales et sociétés de son groupe, aux partenaires et prestataires de services. Conformément à la loi 09-08 relative à la protection des personnes physiques à l\'égard du traitement des données à caractère personnel, vous bénéficiez d\'un droit d\'accès et de rectification aux informations qui vous concernent en vous adressant à l\'agence auprès de laquelle vous avez souscrit au service "Attijarinet". Vous pouvez également, pour des motifs légitimes, vous opposer au traitement des données vous concernant.',
     ],
 
     'card' => [

@@ -51,6 +51,11 @@ a.user-report {
   text-transform: uppercase !important;
 }
 
+/* BUTTONS */
+button:disabled {
+  cursor: not-allowed;
+}
+
 /* EXTRA */
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */

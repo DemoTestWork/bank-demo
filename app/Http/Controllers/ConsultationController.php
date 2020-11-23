@@ -4,13 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Repositories\UserRepository;
+
+use Auth;
+
+
 class ConsultationController extends Controller
 {
     protected $_config;
+    protected $userRepository;
 
-    public function __construct()
+
+    public function __construct(UserRepository $userRepository)
     {
         $this->_config = request('_config');
+        $this->middleware('auth.particular')->except([]);
+
+
+        $this->userRepository = $userRepository;
+
     }
 
 
@@ -21,7 +33,8 @@ class ConsultationController extends Controller
     */
     public function accounts()
     {
-        return view($this->_config['view']);
+        $user = $this->userRepository->getById( Auth::guard('user')->user()->id );
+        return view($this->_config['view'], compact('user'));
     }
 
     public function cards()

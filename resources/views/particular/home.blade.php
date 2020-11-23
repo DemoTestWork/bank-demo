@@ -26,14 +26,15 @@
                                     <td class="@if($account->balance > 0) text-success @else text-warning @endif">{{ $account->balance }}</td>
                                     <td>{{ $account->currency->short_name }}</td>
                                     <td class="dropdown">
-                                        <!-- <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="dropdown-toggle" id="dropdownMenuButton{{ $account->number }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="fas fa-cog"></i>
                                         </a>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div> -->
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ $account->number }}">
+                                            <a class="dropdown-item small" href="#"><i class="fas fa-print text-main"></i> {{ __('app.home.edit_rib') }}</a>
+                                            <a class="dropdown-item small" href="#"><i class="far fa-arrow-alt-circle-right text-main"></i> {{ __('app.home.make_transfer') }}</a>
+                                            <a class="dropdown-item small" href="#"><i class="far fa-clock text-main"></i> {{ __('app.home.real_time_operations') }}</a>
+                                            <a class="dropdown-item small" href="#"><i class="fas fa-exchange-alt text-main"></i> {{ __('app.home.accounting_transactions') }}</a>
+                                        </div>
                                     </td>
                                 </tr>
                                 @endforeach
@@ -56,8 +57,7 @@
                         <img class="img-fluid" src="https://dummyimage.com/580x240/e8e8e8/fff&text=Dummy+Image" alt="Dummy Image">
                     </div>
                     <div class="col col-md-5">
-                        <h2 class="h6 text-main text-uppercase pt-4">{{ __('app.home.notifications') }}</h2>
-                        <hr>
+                        <h2 class="h6 text-main text-uppercase small pt-4 pb-1 mb-3 border-bottom">{{ __('app.home.notifications') }}</h2>
                         <div class="accordion" id="accordionNotif">
                             <div class="card">
                                 <div class="card-header py-1" id="collapse-unpaid">
@@ -67,8 +67,8 @@
                                 </div>
 
                                 <div id="collapse-unp" class="collapse show" aria-labelledby="collapse-unpaid" data-parent="#accordionNotif">
-                                    <div class="card-body py-2">
-                                        {{ __('app.home.empty_data') }} 
+                                    <div class="card-body py-2 text-muted">
+                                        {{ __('app.home.empty_unpaid') }} 
                                     </div>
                                 </div>
                             </div>
@@ -79,8 +79,8 @@
                                     </a>
                                 </div>
                                 <div id="collapse-transf" class="collapse" aria-labelledby="collapse-transfers" data-parent="#accordionNotif">
-                                    <div class="card-body py-2">
-                                        {{ __('app.home.empty_data') }}
+                                    <div class="card-body py-2 text-muted">
+                                        {{ __('app.home.empty_transfer') }}
                                     </div>
                                 </div>
                             </div>

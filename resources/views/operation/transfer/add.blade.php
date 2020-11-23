@@ -34,7 +34,7 @@
                                     <select id="inputState" class="form-control form-control-sm">
                                         <option selected>{{ strtoupper(__('app.transfer.select_beneficiary')) }}</option>
                                     </select>
-                                    <a href="#"><span class="float-right small"><i class="fas fa-plus text-main"></i> {{ __('app.transfer.add_beneficiary') }}</span></a>
+                                    <a href="{{ route('operation.transfer.add_beneficiary') }}"><span class="float-right small"><i class="fas fa-plus text-main"></i> {{ __('app.transfer.add_beneficiary') }}</span></a>
                                 </div>
                             </div>
                             <div class="form-group form-row">
@@ -69,7 +69,7 @@
                     </div>
                     <div class="card-footer bg-light">
                         <button type="submit" class="btn bg-light float-left" style="font-size: 10px">{{ strtoupper(__('app.cancel')) }}</button>
-                        <button type="submit" class="btn bg-main float-right" style="font-size: 10px">{{ strtoupper(__('app.valid')) }}</button>
+                        <button type="submit" class="btn bg-light float-right" style="font-size: 10px" disabled><i class="fas fa-check"></i> {{ strtoupper(__('app.valid')) }}</button>
                     </div>
                 </div>
             </div>

@@ -84,7 +84,7 @@
 
 		<script type="text/javascript">
 			$(function(){
-				$(".nav-item.dropdown, .dropdown").hover(
+				$(".nav-item.dropdown, .dropdown-custom").hover(
 					function () {
 						$('>.dropdown-menu', this).stop(true, true).fadeIn("fast");
 						$(this).addClass('open');

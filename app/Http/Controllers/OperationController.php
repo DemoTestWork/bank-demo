@@ -153,4 +153,13 @@ class OperationController extends Controller
     {
         return view($this->_config['view']);
     }
+
+    /**
+    *
+    * @return \Illuminate\Http\Response
+    */
+    public function addBeneficiary()
+    {
+        return view($this->_config['view']);
+    }
 }

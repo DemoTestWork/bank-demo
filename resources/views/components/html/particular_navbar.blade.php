@@ -12,7 +12,7 @@
             </a>
         </li>
     @else
-        <li class="nav-item dropdown {{ (($menu['route_name']) && (Config::get('app.url').'/'.Request::path()) == route($menu['route_name'])) ? 'active' : ''}}">
+        <li class="nav-item dropdown dropdown-custom {{ (($menu['route_name']) && (Config::get('app.url').'/'.Request::path()) == route($menu['route_name'])) ? 'active' : ''}}">
             <a role="button" data-toggle="dropdown" class="nav-link dropdown-toggle text-uppercase"
                 href="{{ $menu['route_name'] ? route($menu['route_name']) : '#' }}">
                 {{ __($menu['name']) }}

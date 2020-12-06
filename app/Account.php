@@ -47,5 +47,13 @@ class Account extends Model
     public function account_type() 
 	{
 		return $this->belongsTo('App\AccountType');
-	}
+    }
+    
+    /**
+     * The oppositions that belong to the account.
+     */
+    public function oppositions()
+    {
+        return $this->belongsToMany('App\Opposition');
+    }
 }

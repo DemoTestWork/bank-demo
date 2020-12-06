@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid px-5">
+    <div class="container-fluid px-md-5">
         <div class="card bg-dark text-white mb-3" style="height: 18rem">
             <img class="card-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Card image">
             <div class="card-img-overlay">
@@ -16,8 +16,8 @@
             </div>
         </div>
         <div class="bottom-shad mb-5"></div>
-        <div class="row px-5 mx-5">
-            <div class="col px-5">
+        <div class="row px-md-5 mx-md-5">
+            <div class="col px-md-5">
                 <!-- <div class="container px-0"> -->
                     <div class="card bg-light mb-3">
                         <div class="card-body">

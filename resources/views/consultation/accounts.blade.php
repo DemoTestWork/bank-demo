@@ -6,9 +6,9 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid px-5">
-        <div class="row px-5 mx-5">
-            <div class="col px-5">
+    <div class="container-fluid px-md-5">
+        <div class="row px-md-5 mx-md-5">
+            <div class="col px-md-5">
                 <h1 class="h6 text-main text-uppercase pt-4">{{ __('app.home.my_accounts') }}</h1>
 
                 <div class="row mt-5">

@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\User;
+use DB;
 
 class UserRepository extends ResourceRepository
 {
@@ -13,6 +14,15 @@ class UserRepository extends ResourceRepository
 
 	public function getById($id)
 	{
-		return $this->model->with('accounts')->findOrFail($id);
+		return $this->model->with('accounts')->with('beneficiaries')->findOrFail($id);
+	}
+
+	public function getNotReadMessages($id)
+	{
+		return DB::table('messages')->where([
+			['read', true],
+			['user_id', $id],
+			['deleted_at', null],
+		])->get();
 	}
 }

@@ -158,6 +158,10 @@ li.dropdown a {
 }
 .dropdown-menu a { padding: .5em !important; color: #777 }
 
+label.error { color: #dc3545; font-size: 0.8em }
+
+.setting-link { cursor: pointer }
+
 
 /* Extra small devices (portrait phones, less than 576px) */
 /* @media (max-width: 575.98px) { */

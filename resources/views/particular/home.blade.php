@@ -6,9 +6,9 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid px-5">
-        <div class="row px-5 mx-5">
-            <div class="col px-5">
+    <div class="container-fluid px-md-5">
+        <div class="row px-md-5 mx-md-5">
+            <div class="col px-md-5">
                 <h1 class="h6 text-main pt-4">{{ strtoupper(__('app.home.my_accounts')) }}</h1>
                 <hr>
 
@@ -30,8 +30,8 @@
                                         <i class="fas fa-cog"></i>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton{{ $account->number }}">
-                                            <a class="dropdown-item small" href="#"><i class="fas fa-print text-main"></i> {{ __('app.home.edit_rib') }}</a>
-                                            <a class="dropdown-item small" href="#"><i class="far fa-arrow-alt-circle-right text-main"></i> {{ __('app.home.make_transfer') }}</a>
+                                            <a class="dropdown-item small" href="{{ route('service.rib') }}"><i class="fas fa-print text-main"></i> {{ __('app.home.edit_rib') }}</a>
+                                            <a class="dropdown-item small" href="{{ route('operation.transfer.add') }}"><i class="far fa-arrow-alt-circle-right text-main"></i> {{ __('app.home.make_transfer') }}</a>
                                             <a class="dropdown-item small" href="#"><i class="far fa-clock text-main"></i> {{ __('app.home.real_time_operations') }}</a>
                                             <a class="dropdown-item small" href="#"><i class="fas fa-exchange-alt text-main"></i> {{ __('app.home.accounting_transactions') }}</a>
                                         </div>

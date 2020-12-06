@@ -44,6 +44,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Account');
     }
 
+    public function beneficiaries() 
+    {
+        return $this->hasMany('App\Beneficiary');
+    }
+
     public function phoneHidden()
     {
         return str_pad(substr($this->phone, -4), strlen($this->phone), '*', STR_PAD_LEFT);

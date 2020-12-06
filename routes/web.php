@@ -74,11 +74,14 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('/operation/jibi/monitoring', 'OperationController@jibiMonitoring')->defaults('_config', ['view' => 'operation.jibi.monitoring'])->name('operation.jibi.monitoring');
 
             Route::get('/operation/transfer/add-transfer', 'OperationController@addTransfer')->defaults('_config', ['view' => 'operation.transfer.add'])->name('operation.transfer.add');
+            Route::post('/operation/transfer/add-transfer', 'OperationController@addTransferPost')->defaults('_config', ['view' => 'operation.transfer.add'])->name('operation.transfer.add_post');
+            //
             Route::get('/operation/transfer/monitoring', 'OperationController@transferMonitoring')->defaults('_config', ['view' => 'operation.transfer.monitoring'])->name('operation.transfer.monitoring');
             Route::get('/operation/transfer/permanent', 'OperationController@transferPermanent')->defaults('_config', ['view' => 'operation.transfer.permanent'])->name('operation.transfer.permanent');
             Route::get('/operation/transfer/beneficiary-management', 'OperationController@beneficiaryManagement')->defaults('_config', ['view' => 'operation.transfer.beneficiary_management'])->name('operation.transfer.beneficiary_management');
             //
             Route::get('/operation/transfer/add-beneficiary', 'OperationController@addBeneficiary')->defaults('_config', ['view' => 'operation.transfer.add_beneficiary'])->name('operation.transfer.add_beneficiary');
+            Route::post('/operation/transfer/add-beneficiary', 'OperationController@addBeneficiaryPost')->defaults('_config', ['view' => 'operation.transfer.add_beneficiary'])->name('operation.transfer.add_beneficiary_post');
 
 
             Route::get('/operation/card/make-recharge', 'OperationController@makeRecharge')->defaults('_config', ['view' => 'operation.card.make_recharge'])->name('operation.card.make_recharge');
@@ -88,6 +91,13 @@ Route::group(['middleware' => ['web']], function () {
 
             Route::get('/operation/cash-express/add-provision', 'OperationController@addProvision')->defaults('_config', ['view' => 'operation.cash_express.add_provision'])->name('operation.cash_express.add_provision');
             Route::get('/operation/cash-express/monitoring', 'OperationController@cashExpressMonitoring')->defaults('_config', ['view' => 'operation.cash_express.monitoring'])->name('operation.cash_express.monitoring');
+
+            /*
+            |--------------------------------------------------------------------------
+            | Services Group
+            |--------------------------------------------------------------------------
+            |*/
+            Route::get('/services/rib', 'ServiceController@rib')->defaults('_config', ['view' => 'service.rib'])->name('service.rib');
            
             /*
             |--------------------------------------------------------------------------
@@ -99,7 +109,13 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('/setting/electronic-report', 'SettingController@electronicReport')->defaults('_config', ['view' => 'setting.electronic_report'])->name('setting.electronic_report');
             Route::get('/setting/notifications', 'SettingController@notifications')->defaults('_config', ['view' => 'setting.notifications'])->name('setting.notifications');
             Route::get('/setting/password', 'SettingController@password')->defaults('_config', ['view' => 'setting.password'])->name('setting.password');
-
+            
+            /*
+            |--------------------------------------------------------------------------
+            | Other routes
+            |--------------------------------------------------------------------------
+            |*/
+            Route::get('/get-not-read-message/{user_id?}', 'ParticularController@getUserNotReadMessages')->name('particular.message.not_read');
 
         });
     });

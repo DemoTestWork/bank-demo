@@ -12,7 +12,7 @@
     </div>
 
     <div class="bottom-shad mb-5"></div>
-    <div class="row mx-5 px-5 h-100">
+    <div class="row mx-md-5 px-md-5 h-100">
         <div class="col-10 col-md-8 my-auto py-4">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -79,7 +79,7 @@
         </div>
     </div>
     <div class="top-shad mt-5"></div>
-    <div class="d-flex justify-content-around text-center text-muted px-5 my-3 mx-5">
+    <div class="d-flex justify-content-around text-center text-muted px-md-5 my-3 mx-md-5">
         <div class="cont">
             <span class="fa fa-lock fa-3x mb-2"></span>
             <br>

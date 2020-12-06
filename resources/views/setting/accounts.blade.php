@@ -6,9 +6,9 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid px-5">
-        <div class="row px-5 mx-5">
-            <div class="col px-5">
+    <div class="container-fluid px-md-5">
+        <div class="row px-md-5 mx-md-5">
+            <div class="col px-md-5">
                 <h1 class="h5 text-main text-uppercase pt-4">{{ __('app.setting.profile_title') }}</h1>
 
                 {{ Html::setting_menu() }}
@@ -53,4 +53,15 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+<script type="text/javascript">
+    $(function(){
+        $('.setting-link ').click(function(e){
+            e.preventDefault();
+            window.location.href = $(this).data('url');
+        })
+    });
+</script>
 @endsection

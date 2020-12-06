@@ -79,6 +79,12 @@ return [
         'empty_data' => 'Aucune données disponible dans le tableau',
     ],
 
+    // Simple items
+    'message' => 'Message',
+    'date' => 'Date',
+    'subject' => 'Thème',
+    'discussions' => 'Discussions',
+
     'account' => 'Compte',
     'rib' => 'RIB',
     'amount' => 'Montant',
@@ -87,6 +93,8 @@ return [
     'create_date' => 'Date de creation',
     'op_date' => 'Date d\'operation',
     'add_date_hour' => 'Date et heure d\'ajout',
+    'for_edit_phone' => 'Pour éditer votre N° de téléphone, veuillez vous présenter à votre agence',
+    'personnal_data_info' => 'Les données à caractère personnel recueillies dans le cadre du présent formulaire sont destinées à Attijariwafa bank qui de convention expresse est autorisée à procéder à leur traitement automatisé ou non, à les communiquer aux personnes morales et aux filiales et sociétés de son groupe, aux partenaires et prestataires de services. Conformément à la loi 09-08 relative à la protection des personnes physiques à l\'égard du traitement des données à caractère personnel, vous bénéficiez d\'un droit d\'accès et de rectification aux informations qui vous concernent en vous adressant à l\'agence auprès de laquelle vous avez souscrit au service "Attijarinet". Vous pouvez également, pour des motifs légitimes, vous opposer au traitement des données vous concernant.',
 
 
     'all' => 'Tous',
@@ -208,7 +216,7 @@ return [
         'add_beneficiary_title' => 'Ajout de bénéficiaire',
         'add_beneficiary_subtitle' => 'Ajouter un bénéficiaire de virement',
         'add_beneficiary_formtitle' => 'Ajouter un bénéficiaire',
-        'add_beneficiary_info' => 'Les données à caractère personnel recueillies dans le cadre du présent formulaire sont destinées à Attijariwafa bank qui de convention expresse est autorisée à procéder à leur traitement automatisé ou non, à les communiquer aux personnes morales et aux filiales et sociétés de son groupe, aux partenaires et prestataires de services. Conformément à la loi 09-08 relative à la protection des personnes physiques à l\'égard du traitement des données à caractère personnel, vous bénéficiez d\'un droit d\'accès et de rectification aux informations qui vous concernent en vous adressant à l\'agence auprès de laquelle vous avez souscrit au service "Attijarinet". Vous pouvez également, pour des motifs légitimes, vous opposer au traitement des données vous concernant.',
+        'social_reason' => 'Raison sociale',
     ],
 
     'card' => [
@@ -255,6 +263,13 @@ return [
         'monitoring_subtitle' => 'Consultez vos mise à disposition sur les 30 derniers jours.',
         'select_card' => 'Choisissez une carte',
         'provision_list' => 'Liste des mises a disposition',
+    ],
+
+    // Service
+    'service' => [
+        'rib_edition_title' => 'Edition de RIB',
+        'rib_edition_subtitle' => 'Imprimez et sauvegardez vos RIB',
+        'description' => 'Sélectionnez le compte pour lequel vous désirez éditer le relevé d\'identité bancaire.'
     ],
 
     // Setting
@@ -306,6 +321,25 @@ return [
         'new_password' => 'Nouveau mot de passe',
         'display_password' => 'Afficher mot de passe',
         'change_password' => 'Changer le mot de passe',
+    ],
+
+    'check_the_mailbox' => 'Consultez la messagerie',
+
+
+    // Flash messages
+    'transfer_message' => [
+        'order_success' => 'Votre ordre de virement a été envoyé. Vous recevrez un email de confirmation.',
+        'order_error' => 'Erreur',
+        'transfer_account_error' => 'Veuillez selectionner le compte du virement.',
+        'status_account_error' => 'Le compte selectionné n\'est pas actif',
+        'min_amount_error' => 'Le montant de votre virement est inférieur au montant minimum requit (100.00)',
+        'exceeds_amount_error' => 'Le montant de votre virement dépasse le solde disponible',
+        'restrictions' => [
+            'uemoa_protection' => 'Votre compte est soumis à une restriction ordonnée par l\'UEMOA, Veuillez contacter votre gestionnaire pour plus d\'information',
+        ]
+    ],
+    'beneficiary_message' => [
+        'add_success' => 'Bénéficiaire ajouté avec succès.',
     ],
 
 ];

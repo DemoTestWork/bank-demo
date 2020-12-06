@@ -176,5 +176,9 @@ return [
         'time'                  => 'heure',
         'available'             => 'disponible',
         'size'                  => 'taille',
+
+        'amount'                  => 'montant',
+        'transfer_beneficiary'    => 'compte du bénéficiaire',
+
     ],
 ];

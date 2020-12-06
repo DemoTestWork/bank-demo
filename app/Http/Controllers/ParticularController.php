@@ -23,6 +23,8 @@ class ParticularController extends Controller
         $this->middleware('auth.particular')->except(['loginForm','loginPost']);
         $this->middleware('guest', ['except' => 'destroy']);
 
+        $this->middleware('ajax', ['only' => ['getUserNotReadMessages']]);
+
         $this->userRepository = $userRepository;
         $this->accountRepository = $accountRepository;
     }
@@ -89,7 +91,8 @@ class ParticularController extends Controller
     */
     public function home()
     {
-        $user = $this->userRepository->getById( Auth::guard('user')->user()->id );
+        $user_id = Auth::guard('user')->user()->id;
+        $user = $this->userRepository->getById( $user_id );
         // $accounts = $this->accountRepository->getUserAccount($user->id);
 
         // echo '<pre>',print_r($user->accounts[0],1),'</pre>'; exit();
@@ -103,7 +106,7 @@ class ParticularController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Destroy session.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -114,4 +117,19 @@ class ParticularController extends Controller
 
         return redirect()->route($this->_config['redirect']);
     }
+
+    /**
+     * Get current user not read messages.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function getUserNotReadMessages($user_id = null)
+    {
+        if(!$user_id) $user_id = Auth::guard('user')->user()->id;
+        $messages = $this->userRepository->getNotReadMessages($user_id);
+        return response()->json(['status' => true, 'data' => $messages]);
+    }
+
+    
 }

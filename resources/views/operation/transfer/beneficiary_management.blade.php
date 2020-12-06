@@ -6,14 +6,14 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid px-5">
-        <div class="row px-5 mx-5">
-            <div class="col px-5">
-                <h1 class="h5 text-main pt-4">{{ strtoupper(__('app.transfer.management_title')) }}</h1>
+    <div class="container-fluid px-md-5">
+        <div class="row px-md-5 mx-md-5">
+            <div class="col px-md-5">
+                <h1 class="h5 text-main pt-4 text-uppercase">{{ __('app.transfer.management_title') }}</h1>
                 <p class="text-muted small">{{ __('app.transfer.management_subtitle') }}</p>
 
                 <div class="card bg-light mt-5 mb-3">
-                    <div class="card-header text-muted small py-1">{{ strtoupper(__('app.search')) }}</div>
+                    <div class="card-header text-muted small py-1 text-uppercase">{{ __('app.search') }}</div>
                     <div class="card-body">
                         <form class="form-horizontal" action="" autocomplete="off">
                             @csrf
@@ -38,20 +38,20 @@
                 </div>
 
                 <div class="card bg-light mt-4 mb-3">
-                    <div class="card-header text-muted small py-1">{{ strtoupper(__('app.transfer.beneficiary_list_title')) }}</div>
+                    <div class="card-header text-muted small py-1 text-uppercase">{{ __('app.transfer.beneficiary_list_title') }}</div>
                     <div class="card-body">
                         <table class="table table-bordered">
-                            <thead class="thead-light" style="font-size: 10px">
+                            <thead class="thead-light text-uppercase" style="font-size: 10px">
                                 <tr>
                                 <th class="" scope="col">
                                     
                                 </th>
-                                <th class="py-1" scope="col">{{ strtoupper(__('app.beneficiary')) }}</th>
-                                <th class="py-1" scope="col">{{ strtoupper(__('app.transfer.beneficiary_type')) }}</th>
-                                <th class="py-1" scope="col">{{ strtoupper(__('app.rib')) }}</th>
-                                <th class="py-1" scope="col">{{ strtoupper(__('app.account_type')) }}</th>
-                                <th class="py-1" scope="col">{{ strtoupper(__('app.bank')) }}</th>
-                                <th class="py-1" scope="col">{{ strtoupper(__('app.add_date')) }}</th>
+                                <th class="py-1" scope="col">{{ __('app.beneficiary') }}</th>
+                                <th class="py-1" scope="col">{{ __('app.transfer.beneficiary_type') }}</th>
+                                <th class="py-1" scope="col">{{ __('app.rib') }}</th>
+                                <th class="py-1" scope="col">{{ __('app.account_type') }}</th>
+                                <th class="py-1" scope="col">{{ __('app.bank') }}</th>
+                                <th class="py-1" scope="col">{{ __('app.add_date') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -68,8 +68,8 @@
                         </table>
                     </div>
                     <div class="card-footer bg-light">
-                        <button style="font-size: 10px" type="submit" class="btn bg-light float-left"><i class="fas fa-trash-alt"></i> {{ strtoupper(__('app.remove')) }}</button>
-                        <button style="font-size: 10px" type="submit" class="btn bg-main float-right"><i class="fas fa-plus text-light"></i> {{ strtoupper(__('app.transfer.add_beneficiary')) }}</button>
+                        <button style="font-size: 10px" type="submit" class="btn bg-light float-left text-uppercase"><i class="fas fa-trash-alt "></i> {{ __('app.remove') }}</button>
+                        <button style="font-size: 10px" type="submit" class="btn bg-main float-right text-uppercase"><i class="fas fa-plus text-light"></i> {{ __('app.transfer.add_beneficiary') }}</button>
                     </div>
                 </div>
             </div>
